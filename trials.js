@@ -23,6 +23,18 @@ let list = document.querySelector('.todo-list') //select to-do list unorderd lis
 
 thingsToDo.map( todoItem => {               //iterate over thingsToDo array
     let newToDo = document.createElement("li");  //create a var equal to a new list item
+    let deleteBtn = document.createElement("button");
+
+    //Assign Text To Elementss
+    deleteBtn.innerText = "X";
+    newToDo.innerText = todoItem;
+    
+    //Delete
+    deleteBtn.addEventListener('click', () => {
+        newToDo.remove();
+    })
+
+    //Add Elements to The DOM
     newToDo.innerText = todoItem;    //set the inner text to the current todoItem string
      list.append(newToDo);           //add the new lisst item to the todo-list
 })
