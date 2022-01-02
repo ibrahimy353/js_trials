@@ -3,12 +3,16 @@ let button = document.querySelector('.submit-btn');
 //select the element with the class 'submit-btn' and set it to local variable 'button'
 
 button.addEventListener('click', () => {
-    console.log("woof")
-});
-// adding an Event Listener on the button variable, pass it the event of 'click'
-// when a user clicks on the corresponding tag to the button variable, 
-// the code within the function will run
-
+    //grab the value from the input and assign it to a variable
+       let textInput = document.querySelector('.new-todo-input').value;
+   //create a new list item element and variable
+       let newToDo = document.createElement("li");
+   //use the input text for the new ToDo item text
+       newToDo.innerText = textInput;
+   //add the item to our existing 'list'
+       list.append(newToDo);
+   });
+   
 let thingsToDo = [      // define array of things to do
     "walk the dog",
     "mow the front lawn",
