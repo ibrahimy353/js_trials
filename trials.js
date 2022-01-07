@@ -1,4 +1,4 @@
-let button = document.querySelector('.submit-btn');
+ let button = document.querySelector('.submit-btn');
 let list = document.querySelector('.todo-list');
 
 let thingsToDo = [
